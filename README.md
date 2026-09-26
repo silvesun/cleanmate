@@ -1,6 +1,6 @@
 # SafeSweep website
 
-Public pages for the SafeSweep Mac app, served with GitHub Pages at <https://silvesun.github.io/cleanmate/>.
+Public pages for the SafeSweep Mac app, served with GitHub Pages at <https://silvesun.github.io/safesweep/>.
 
 | Page | Chinese | English | App Store Connect field |
 |---|---|---|---|
