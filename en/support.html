@@ -36,10 +36,13 @@
     <h2>Frequently asked questions</h2>
 
     <h3>I cleaned, so why didn't free space go up?</h3>
-    <p>Cleaned files are in the Trash and still take up space. When you're sure you don't need them, empty the Trash in Finder. SafeSweep never empties the Trash for you.</p>
+    <p>Cleaned files are in the Trash and still take up space. When you're sure you don't need them, empty the Trash in Finder. After a cleanup of caches that apps rebuild on your Mac, you can also click Free Space Now: once you confirm, it deletes that cleanup's copies from the Trash and nothing else. SafeSweep never empties the whole Trash.</p>
 
     <h3>I removed something by mistake. What now?</h3>
-    <p>Click Undo in the banner at the bottom of the window, or Rollback in Cleanup History, and the files return to where they were. You can also open the Trash, Control-click a file and choose Put Back. As long as the Trash hasn't been emptied, you can recover it.</p>
+    <p>Click Undo in the banner at the bottom of the window (or on the Smart Clean page), or Rollback in Cleanup History, and the files return to where they were. You can also open the Trash, Control-click a file and choose Put Back. As long as the file is still in the Trash, you can recover it.</p>
+
+    <h3>What is the floating Trash?</h3>
+    <p>The Trash button in the corner of the window shows where cleaned items go. It turns orange, with a count, while files SafeSweep cleaned are still in the Trash, and clicking it opens Cleanup History. Drag it anywhere you like; Control-click it to move it back to the corner.</p>
 
     <h3>Is it harmful to delete caches?</h3>
     <p>No. Caches are temporary data that apps rebuild when needed. Some apps may open a little slower the first time afterwards.</p>
@@ -48,7 +51,16 @@
     <p>SafeSweep follows macOS security rules and can only open folders you grant. Choose your home folder the first time you scan, and the Applications folder when you uninstall an app. You can check access at any time on the app's Security &amp; Permissions page.</p>
 
     <h3>Why are some items missing or not selected?</h3>
-    <p>SafeSweep only preselects items it knows are safe. Items that may hold your data, such as device backups or downloaded installers, are yours to confirm; caches of running apps are skipped; and keychains, iCloud Drive, your Photos library and other personal data are never offered for cleaning.</p>
+    <p>SafeSweep only preselects items it knows are safe. Items that may hold your data, such as device backups, downloaded installers, a Maven repository or JetBrains local history, are yours to confirm; caches of running apps are skipped; and keychains, iCloud Drive, Mail, Messages and other protected data are never offered for cleaning.</p>
+
+    <h3>An item was skipped as "changed since the scan".</h3>
+    <p>Before moving anything, SafeSweep checks that it is still the file it scanned. If the file was replaced or edited in the meantime, it is left alone. Scan again to see it as it is now.</p>
+
+    <h3>Can SafeSweep remove photos from my Photos library?</h3>
+    <p>Only when you ask it to. Similar Photos can compare your library on your Mac; photos you choose to remove go through the Photos app, which asks you to confirm and keeps them in Recently Deleted.</p>
+
+    <h3>Does SafeSweep need Full Disk Access?</h3>
+    <p>No. Everything works with the folders you grant. If you choose to give it Full Disk Access in System Settings, Junk Scan can also list copies of Mail attachments you opened, and Disk Map can measure data inside protected app containers.</p>
 
     <h3>It says the app is running when I uninstall.</h3>
     <p>To prevent data loss, SafeSweep won't uninstall an app that is running. Quit the app (⌘Q) first, then uninstall it.</p>

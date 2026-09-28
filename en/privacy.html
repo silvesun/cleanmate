@@ -23,7 +23,7 @@
 
   <main class="prose doc">
     <h1>SafeSweep Privacy Policy</h1>
-    <p class="meta">Effective September 26, 2026 · Applies to SafeSweep 1.0 and later</p>
+    <p class="meta">Effective September 28, 2026 · Applies to SafeSweep 1.0 and later</p>
 
     <p><strong>In short: SafeSweep doesn't collect any of your data.</strong> It has no internet access and no accounts, ads, analytics or third-party components. Every scan and cleanup happens on your Mac, and no information leaves your device.</p>
 
@@ -34,29 +34,38 @@
     <h2>Information SafeSweep processes on your Mac</h2>
     <p>To do its job, SafeSweep reads the following on your Mac. It is used only there and is never uploaded or shared:</p>
     <ul>
-      <li><strong>File information:</strong> names, paths, sizes and dates of files inside the folders you grant. To find duplicates, it reads file contents to compare them.</li>
+      <li><strong>File information:</strong> names, paths, sizes and dates of files inside the folders you grant, and each file's identity on the disk (its file number, volume and creation date), so a file that was replaced or changed after a scan is never acted on. To find duplicates, it reads file contents to compare them.</li>
+      <li><strong>Photos:</strong> only if you use Similar Photos with your Photos library, and only after you allow it, SafeSweep compares small thumbnails on your Mac. Photos you choose to remove go through the Photos app, which keeps them in Recently Deleted.</li>
       <li><strong>App information:</strong> names, versions and sizes of installed apps, and the list of running apps, for the uninstaller and to skip apps in use.</li>
-      <li><strong>System status:</strong> processor load, memory and free disk space shown in the menu bar and desktop widget, displayed only and never stored.</li>
+      <li><strong>System status:</strong> processor load, memory, disk space, thermal state, network speed and battery level shown in the menu bar and desktop widget, read from the system's own counters, displayed only and never stored. SafeSweep never connects to the network.</li>
     </ul>
 
     <h2>Folder access</h2>
     <p>SafeSweep follows the macOS App Sandbox and can only open folders you choose in the system's folder picker: your home folder to scan caches, logs and personal files, and the Applications folder to list and uninstall apps. You can decline, in which case those features are unavailable. SafeSweep never requests access to other folders on its own.</p>
+
+    <h2>Optional permissions</h2>
+    <p>These are asked for only when you use the related feature, and everything else works without them:</p>
+    <ul>
+      <li><strong>Photos:</strong> to find similar photos in your Photos library.</li>
+      <li><strong>Notifications:</strong> only if you turn on scan reminders or the low-disk alert. All notifications are created on your Mac.</li>
+      <li><strong>Full Disk Access:</strong> never required, and granted only by you in System Settings. It lets Junk Scan list copies of Mail attachments you opened and lets Disk Map measure data inside protected app containers.</li>
+    </ul>
 
     <h2>Data stored on your Mac</h2>
     <p>The following is kept only in SafeSweep's own sandbox container on your Mac:</p>
     <ul>
       <li>your folder access grants, so you don't need to grant them again at every launch;</li>
       <li>your settings, such as language, appearance and interface style;</li>
-      <li>a summary of past cleanups, plus the original locations needed to restore files from the Trash;</li>
+      <li>a summary of past cleanups, plus the original locations and identities of the files each one moved to the Trash, needed to restore them;</li>
       <li>items you added to the ignore list.</li>
     </ul>
 
     <h2>How files are handled</h2>
-    <p>SafeSweep lists files for you to review before cleaning. Cleaning only moves files to the macOS Trash; nothing is deleted directly, and SafeSweep never empties the Trash. Keychains, iCloud Drive, your Photos library, Mail, Messages and other personal data are protected and never cleaned. Until you empty the Trash yourself, you can put any file back where it was.</p>
+    <p>SafeSweep lists files for you to review before cleaning. Cleaning only moves files to the macOS Trash, and SafeSweep never empties the Trash. After a cleanup of caches that apps rebuild on your Mac, you may choose Free Space Now: once you confirm, it permanently deletes only that cleanup's own items from the Trash. Keychains, iCloud Drive, Mail, Messages and other protected data are never cleaned. Until a file leaves the Trash, you can put it back where it was.</p>
 
     <h2>Deleting your data</h2>
     <ul>
-      <li>In SafeSweep, choose Settings › Advanced › Clear All History to delete cleanup history.</li>
+      <li>In SafeSweep, choose Settings › Advanced › Clear All History to delete cleanup history. Cleanups whose files are still in the Trash stay listed, so they can still be restored.</li>
       <li>Move SafeSweep to the Trash and delete its data folder (<code>~/Library/Containers/com.silvesun.safesweep</code>) to remove everything SafeSweep stored on your Mac, including folder access grants.</li>
       <li>Removing SafeSweep does not restore files already in the Trash and does not affect your other files.</li>
     </ul>
